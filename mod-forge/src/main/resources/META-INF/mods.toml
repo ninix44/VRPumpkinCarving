@@ -8,6 +8,7 @@ version = "${version}"
 displayName = "VRPumpkinCarving"
 authors = "Ninix"
 displayTest = "NONE"
+logoFile = ""
 description = '''
 Pumpkin Carving Addon for Visor
 

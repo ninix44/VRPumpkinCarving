@@ -1,28 +1,16 @@
 package org.vmstudio.pumpkincarving.core.client;
 
-import org.vmstudio.visor.api.VisorAPI;
-import org.vmstudio.visor.api.common.addon.VisorAddon;
-import org.vmstudio.pumpkincarving.core.client.overlays.VROverlayExample;
-import org.vmstudio.pumpkincarving.core.common.VisorPumpkinCarving;
 import net.minecraft.network.chat.Component;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.List;
+import org.vmstudio.pumpkincarving.core.common.AddonNetworking;
+import org.vmstudio.pumpkincarving.core.common.VisorPumpkinCarving;
+import org.vmstudio.visor.api.common.addon.VisorAddon;
 
 public class PumpkinCarvingAddonClient implements VisorAddon {
     @Override
     public void onAddonLoad() {
-        VisorAPI.addonManager().getRegistries()
-                .overlays()
-                .registerComponents(
-                        List.of(
-                                new VROverlayExample(
-                                        this,
-                                        VROverlayExample.ID
-                                )
-                        )
-                );
+        AddonNetworking.initCommon();
     }
 
     @Override

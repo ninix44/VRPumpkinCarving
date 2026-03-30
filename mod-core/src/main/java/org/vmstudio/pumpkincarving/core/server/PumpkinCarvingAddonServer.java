@@ -1,15 +1,16 @@
 package org.vmstudio.pumpkincarving.core.server;
 
-import org.vmstudio.visor.api.common.addon.VisorAddon;
-import org.vmstudio.pumpkincarving.core.common.VisorPumpkinCarving;
 import net.minecraft.network.chat.Component;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.vmstudio.pumpkincarving.core.common.AddonNetworking;
+import org.vmstudio.pumpkincarving.core.common.VisorPumpkinCarving;
+import org.vmstudio.visor.api.common.addon.VisorAddon;
 
 public class PumpkinCarvingAddonServer implements VisorAddon {
     @Override
     public void onAddonLoad() {
-
+        AddonNetworking.initCommon();
     }
 
     @Override

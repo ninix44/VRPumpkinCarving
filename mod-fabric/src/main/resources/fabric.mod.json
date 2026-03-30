@@ -12,7 +12,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "org.vmstudio.pumpkincarving.fabric.ExampleMod"
+      "org.vmstudio.pumpkincarving.fabric.PumpkinCarvingFabric"
     ]
   },
   "mixins": [
