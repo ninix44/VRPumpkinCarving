@@ -1,9 +1,9 @@
-package your.mod.example.fabric;
+package org.vmstudio.pumpkincarving.fabric;
 
 import org.vmstudio.visor.api.ModLoader;
 import org.vmstudio.visor.api.VisorAPI;
-import your.mod.example.core.client.ExampleAddonClient;
-import your.mod.example.core.server.ExampleAddonServer;
+import org.vmstudio.pumpkincarving.core.client.PumpkinCarvingAddonClient;
+import org.vmstudio.pumpkincarving.core.server.PumpkinCarvingAddonServer;
 import net.fabricmc.api.ModInitializer;
 
 public class ExampleMod implements ModInitializer {
@@ -11,11 +11,11 @@ public class ExampleMod implements ModInitializer {
     public void onInitialize() {
         if(ModLoader.get().isDedicatedServer()){
             VisorAPI.registerAddon(
-                    new ExampleAddonServer()
+                    new PumpkinCarvingAddonServer()
             );
         }else{
             VisorAPI.registerAddon(
-                    new ExampleAddonClient()
+                    new PumpkinCarvingAddonClient()
             );
         }
     }
